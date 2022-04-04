@@ -14,7 +14,8 @@ export default function Home() {
         let max_distance;
 
         p.setup = () => {
-          p.createCanvas(710, 400);
+          p.createCanvas(p.windowWidth, p.windowHeight)
+            .parent(divRef.current);
           p.noStroke();
           max_distance = p.dist(0, 0, p.width, p.height);
         }
